@@ -717,12 +717,11 @@
         box-sizing: border-box;
         aspect-ratio: auto;
         display: flex;
+        justify-content: center;
         gap: 16px;
-        overflow-x: auto;
+        overflow-x: visible;
         overflow-y: visible;
         padding: 18px 6px 34px;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: thin;
       }
       .case-card,
       .case-card:hover,
@@ -737,6 +736,9 @@
         min-width: 0;
         flex: 0 0 clamp(250px, 74vw, 300px);
         scroll-snap-align: center;
+      }
+      .case-card:not(.is-active) {
+        display: none;
       }
       .case-card .card-face {
         height: 100%;
@@ -915,7 +917,6 @@
         <div class="tabs" role="tablist" aria-label="案例內容切換">
           <button class="tab is-active" type="button" data-tab="story">故事</button>
           <button class="tab" type="button" data-tab="work">我做了什麼</button>
-          <button class="tab" type="button" data-tab="review">復盤</button>
         </div>
         <div class="detail" id="stageDetail"></div>
       </article>
@@ -971,8 +972,7 @@
           "assets/art/boardgame-tokens.jpg"
         ],
         story: ["從茶席暖場、頌缽冥想到桌遊探索，讓參與者逐步進入狀態。", "桌遊本身為外部購入，我負責把它轉化成適合現場節奏的體驗流程。", "最好的回饋集中在個案引導：陪參與者理解抽到的牌卡，並連回當下生活。"],
-        work: ["活動企劃、場地安排、道具準備、宣傳圖、報名流程。", "現場引導與節奏控制，讓小團體討論能自然展開。", "活動後續貼文整理與素材應用。"],
-        review: "這場活動讓我確認自己適合處理低人數、高感受密度的體驗；下一步會把回饋表單與照片紀錄前置規劃，讓成果更容易被後續使用。"
+        work: ["活動企劃、場地安排、道具準備、宣傳圖、報名流程。", "現場引導與節奏控制，讓小團體討論能自然展開。", "活動後續貼文整理與素材應用。"]
       },
       {
         id: "dreamlake",
@@ -990,8 +990,7 @@
           "assets/art/dreamlake-real-creek.jpg"
         ],
         story: ["活動從集合、暖場、分組、靜走開始，接著進入苔蘚觸摸、薑茶休息、聽風、湖邊選枝條與葉拓。", "最大風險是天氣與參與者年齡差異，因此規劃雨天備案、分組支援與緊急救護角色。", "活動後透過 Google 表單收集滿意度、改進處、值得紀念的地方與想留給主辦方的話。"],
-        work: ["場勘、活動流程表、動線與分組規劃。", "人員分工：壓後安全、中段傳訊、道具與手作材料支援。", "現場服務、拍照、回饋整理與後續 SOP 化。"],
-        review: "如果重辦一次，我會選擇更平坦的路線，以些微犧牲景色換取更低風險與更穩定的團體節奏。"
+        work: ["場勘、活動流程表、動線與分組規劃。", "人員分工：壓後安全、中段傳訊、道具與手作材料支援。", "現場服務、拍照、回饋整理與後續 SOP 化。"]
       },
       {
         id: "tipsy",
@@ -1004,8 +1003,7 @@
         cover: "assets/art/tipsy-dm.png",
         gallery: ["assets/art/tipsy-dm.png"],
         story: ["活動設定滿 6 人開團，費用包含酒水，使用 COVA 紅酒與黑醋栗酒。", "目的偏向陌生人交友與放鬆交流，透過微醺感降低初次見面的距離。", "活動有達到參與人數，但互動設計仍有優化空間。"],
-        work: ["Canva 宣傳圖、報名規則、費用與成本計算。", "活動場地與酒水配置，現場主持與參與者互動。", "活動後檢討互動方式。"],
-        review: "真心話大冒險的轉盤容易讓被抽中的人緊張；下一版會加入更低壓、漸進式的個人表達任務。"
+        work: ["Canva 宣傳圖、報名規則、費用與成本計算。", "活動場地與酒水配置，現場主持與參與者互動。", "活動後檢討互動方式。"]
       },
       {
         id: "forest",
@@ -1024,8 +1022,7 @@
           "assets/art/forest-crystal-dm.png"
         ],
         story: ["集合於咖啡廳後，由店主以小車帶領進入山林與私人場域。", "體驗包含溪流風景、天然 SPA 池、手作料理、烤肉與水晶冥想。", "我負責把自然資源轉譯為活動賣點與參與者期待。"],
-        work: ["與店主討論活動內容、費用與素材方向。", "製作 Canva DM、透過 IG 私訊進行溝通與推進。", "規劃頌缽冥想與礦石連結段落。"],
-        review: "這類一人主辦活動最容易缺照片紀錄；未來需要前置安排紀錄人員或固定拍攝節點。"
+        work: ["與店主討論活動內容、費用與素材方向。", "製作 Canva DM、透過 IG 私訊進行溝通與推進。", "規劃頌缽冥想與礦石連結段落。"]
       },
       {
         id: "west",
@@ -1038,8 +1035,7 @@
         cover: "assets/art/west-workshop.jpg",
         gallery: ["assets/art/west-workshop.jpg", "assets/art/west-crowd.jpg"],
         story: ["這場活動規劃不是我的工作，我的角色是現場支援與協調。", "現場約 15 個攤位品牌，參與者約 100 至 200 人。", "重點是讓主辦、攤商與參與者之間的資訊落差降低。"],
-        work: ["報到支援、動線協調、活動記錄與場布。", "作為現場傳訊者，協助問題往正確窗口流動。", "觀察大場域活動如何維持服務穩定。"],
-        review: "這場讓我補上中小型戶外場域經驗，知道活動企劃不只在流程表，也在現場資訊的即時交換。"
+        work: ["報到支援、動線協調、活動記錄與場布。", "作為現場傳訊者，協助問題往正確窗口流動。", "觀察大場域活動如何維持服務穩定。"]
       }
     ];
 
@@ -1088,10 +1084,6 @@
     }
 
     function renderDetail(item) {
-      if (activeTab === "review") {
-        stageDetail.innerHTML = `<p class="quote">${item.review}</p>`;
-        return;
-      }
       stageDetail.innerHTML = list(item[activeTab]);
     }
 
