@@ -1,0 +1,14 @@
+Thumbs.db
+.DS_Store
+*.tmp
+*.log
+pdf/
+assets/dreamlake-plan.pdf
+assets/dreamlake-plan-page-*.png
+assets/resume-page-*.png
+assets/cover.png
+assets/art/boardgame-story-*.png
+assets/art/card-*.png
+assets/art/crystal-*.jpg
+assets/art/dreamlake-plan-*.png
+assets/art/imagine-*.png
