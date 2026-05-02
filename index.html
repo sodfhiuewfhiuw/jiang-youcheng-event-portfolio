@@ -717,11 +717,12 @@
         box-sizing: border-box;
         aspect-ratio: auto;
         display: flex;
-        justify-content: center;
         gap: 16px;
-        overflow-x: visible;
+        overflow-x: auto;
         overflow-y: visible;
         padding: 18px 6px 34px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
       }
       .case-card,
       .case-card:hover,
@@ -736,9 +737,6 @@
         min-width: 0;
         flex: 0 0 clamp(250px, 74vw, 300px);
         scroll-snap-align: center;
-      }
-      .case-card:not(.is-active) {
-        display: none;
       }
       .case-card .card-face {
         height: 100%;
