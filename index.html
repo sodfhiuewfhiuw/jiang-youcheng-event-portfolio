@@ -112,6 +112,20 @@
       padding: 38px 0 46px;
     }
     .hero-copy { position: relative; z-index: 2; }
+    .role-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+    .role-line span {
+      border: 1px solid rgba(35, 70, 58, .26);
+      background: rgba(255, 255, 255, .48);
+      color: var(--forest);
+      padding: 5px 11px;
+      font-size: 13px;
+      line-height: 1.35;
+    }
     h1 {
       margin: 0;
       font-family: var(--serif);
@@ -125,6 +139,43 @@
       margin: 28px 0 0;
       color: #3e4a43;
       font-size: 18px;
+    }
+    .hero-lead strong {
+      color: var(--wine);
+      font-weight: 800;
+    }
+    .quick-paths {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 28px;
+      max-width: 650px;
+    }
+    .quick-path {
+      min-height: 94px;
+      border: 1px solid rgba(24, 51, 54, .18);
+      background: rgba(255, 251, 242, .62);
+      padding: 14px;
+      box-shadow: 0 12px 30px rgba(52, 42, 30, .08);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .quick-path:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,.82);
+      border-color: rgba(130, 55, 71, .34);
+    }
+    .quick-path b {
+      display: block;
+      color: var(--forest);
+      font-size: 15px;
+      line-height: 1.35;
+    }
+    .quick-path span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
     }
     .contact {
       display: flex;
@@ -688,6 +739,10 @@
         display: grid;
         gap: 18px;
       }
+      .role-line {
+        margin-bottom: 0;
+        gap: 7px;
+      }
       h1 {
         font-size: clamp(42px, 10vw, 70px);
         line-height: 1.1;
@@ -697,6 +752,15 @@
       .hero-copy p {
         margin: 0;
         max-width: 100%;
+      }
+      .quick-paths {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 0;
+      }
+      .quick-path {
+        min-height: 72px;
+        padding: 12px 14px;
       }
       .contact {
         margin-top: 2px;
@@ -860,8 +924,28 @@
   <main id="top">
     <header class="wrap hero">
       <div class="hero-copy">
-        <h1>把人的感受<br>做成一場<br>可以進入的體驗</h1>
-        <p>我以社群內容、活動流程、現場服務與回饋整理串起企劃工作；擅長把抽象主題轉成參與者能理解、能互動、能留下記憶的活動。</p>
+        <div class="role-line" aria-label="求職定位">
+          <span>活動企劃</span>
+          <span>品牌體驗</span>
+          <span>場域工作坊</span>
+          <span>AI 流程加速</span>
+        </div>
+        <h1>江祐誠<br>把品牌感受<br>做成活動體驗</h1>
+        <p class="hero-lead">我擅長把品牌想傳遞的感受，設計成一場<strong>可以被參與、被記住，也能延伸成社群內容</strong>的活動體驗。</p>
+        <div class="quick-paths" aria-label="快速瀏覽">
+          <a class="quick-path" href="#case-stage">
+            <b>看代表案例</b>
+            <span>森林療癒、心靈桌遊、公益靈氣與場域活動。</span>
+          </a>
+          <a class="quick-path" href="#about">
+            <b>看我能解決什麼</b>
+            <span>活動流程、現場控場、社群延伸與回饋整理。</span>
+          </a>
+          <a class="quick-path" href="#ai">
+            <b>看 AI 加速方式</b>
+            <span>用 AI 整理企劃、SOP、素材與重複性流程。</span>
+          </a>
+        </div>
         <div class="contact">
           <span>台中市南區</span>
           <span>0978-703-993</span>
