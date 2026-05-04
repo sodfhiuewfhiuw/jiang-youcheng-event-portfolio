@@ -413,6 +413,69 @@
       color: var(--muted);
     }
 
+    .deliverables {
+      padding-top: 8px;
+    }
+    .deliverable-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .deliverable-card {
+      min-height: 250px;
+      padding: 24px;
+      border: 1px solid rgba(24, 51, 54, .18);
+      background:
+        linear-gradient(150deg, rgba(255, 251, 242, .82), rgba(232, 218, 196, .62)),
+        rgba(255,255,255,.4);
+      box-shadow: 0 18px 44px rgba(52, 42, 30, .1);
+    }
+    .deliverable-card b {
+      display: block;
+      color: var(--wine);
+      font-family: var(--serif);
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .deliverable-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .deliverable-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 8px;
+    }
+    .deliverable-card li {
+      position: relative;
+      padding-left: 18px;
+      color: #324741;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .deliverable-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+    .deliverable-note {
+      margin-top: 14px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--forest);
+      background: rgba(255,255,255,.48);
+      color: #31443e;
+      font-weight: 700;
+    }
+
     .about {
       display: grid;
       grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
@@ -762,6 +825,13 @@
         min-height: 72px;
         padding: 12px 14px;
       }
+      .deliverable-grid {
+        grid-template-columns: 1fr;
+      }
+      .deliverable-card {
+        min-height: auto;
+        padding: 20px;
+      }
       .contact {
         margin-top: 2px;
         gap: 8px 14px;
@@ -913,6 +983,7 @@
       <a class="brand" href="#top"><strong>江祐誠</strong><span>活動企劃作品集</span></a>
       <div class="nav-links" aria-label="頁面導覽">
         <a href="#cases">活動牌組</a>
+        <a href="#deliverables">交付內容</a>
         <a href="#about">關於我</a>
         <a href="#case-stage">案例舞台</a>
         <a href="#ai">AI 加速</a>
@@ -962,6 +1033,46 @@
         <div class="seal">2026</div>
       </section>
     </header>
+
+    <section class="wrap section deliverables" id="deliverables">
+      <div class="section-head">
+        <h2>我能交付什麼</h2>
+        <p>不是只有想法，而是把活動從前期規劃、現場執行到後續內容整理成可以落地的工作流。</p>
+      </div>
+      <div class="deliverable-grid">
+        <article class="deliverable-card">
+          <b>活動前</b>
+          <p>把概念收斂成清楚的執行藍圖。</p>
+          <ul>
+            <li>活動企劃架構與流程表</li>
+            <li>報名表、Google 表單與參與者通知</li>
+            <li>社群宣傳文案、短影音腳本與視覺素材 Brief</li>
+            <li>AI 協助資料彙整、參考案例整理與 SOP 初稿</li>
+          </ul>
+        </article>
+        <article class="deliverable-card">
+          <b>活動中</b>
+          <p>讓現場節奏穩定，參與者能自然進入狀態。</p>
+          <ul>
+            <li>現場人員分工與動線安排</li>
+            <li>暖場、引導、互動橋段與場控節奏</li>
+            <li>突發狀況處理與安全風險控管</li>
+            <li>照片紀錄重點與素材收集節點</li>
+          </ul>
+        </article>
+        <article class="deliverable-card">
+          <b>活動後</b>
+          <p>把一次活動整理成可追蹤、可延伸、可複製的成果。</p>
+          <ul>
+            <li>回饋表單整理與重點洞察</li>
+            <li>活動照片、素材分類與社群貼文</li>
+            <li>成果紀錄、數字整理與品牌故事延伸</li>
+            <li>SOP 優化，讓下一次活動更省力</li>
+          </ul>
+        </article>
+      </div>
+      <div class="deliverable-note">我的價值在於把散落的想法、人、場地與素材，整理成可以推進的活動流程。</div>
+    </section>
 
     <section class="wrap section about" id="about">
       <figure class="profile-photo">
